@@ -38,4 +38,5 @@ store.subscribe(()=>{
     console.log(store.getState())
 })
 
+store.dispatch(addUser("sarker"))
 store.dispatch(addUser("Kajol"))
