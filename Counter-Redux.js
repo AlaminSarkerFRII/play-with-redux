@@ -28,17 +28,24 @@ const decrementCounter = ()=>{
         type:"DECREMENT"
     }
 }
+const resetCounter = ()=>{
+    return {
+        type:"RESET"
+    }
+}
 
 const counterReducer = (state=initialState,action)=>{
     switch (action.type) {
         case INCREMENT:{
             return{
+                ...state, // multiple state thakle
                 count:state.count + 1
             }
         }
         // or
         case DECREMENT:{
             return {
+                ...state,
                 count:state.count - 1
             }  
         }
@@ -68,6 +75,8 @@ store.subscribe (()=>{
 
 store.dispatch(incrementCounter())
 store.dispatch(incrementCounter())
+store.dispatch(resetCounter())
 store.dispatch(incrementCounter())
-store.dispatch(incrementCounter())
+store.dispatch(decrementCounter())
+store.dispatch(decrementCounter())
 
