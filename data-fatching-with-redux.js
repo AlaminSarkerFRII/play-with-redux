@@ -102,6 +102,4 @@ store.subscribe(()=>{
 })
 
 // dispatch 
-
 store.dispatch(fetchData())
-
