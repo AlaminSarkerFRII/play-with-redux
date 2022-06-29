@@ -16,8 +16,6 @@ const GET_TODOS_FAILED = "GET_TODOS_FAILED"
 
 const url = "https://jsonplaceholder.typicode.com/todos"
 
-
-
 //<step-01=====State declare====>
 
 const initialTodosState = {
@@ -25,7 +23,6 @@ const initialTodosState = {
     isLoading:false,
     error:null,
 }
-
 
 //<step-02=====actions declare==>
 
@@ -46,7 +43,6 @@ const getTodosFailed = (error)=>{
         payload:error,
     }
 }
-
 
 //<step-03=====reducer declare====>
 
